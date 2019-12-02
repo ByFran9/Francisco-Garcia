@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div {
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--Un formulario tiene 2 atributos principales: action 
+    url donde se envian los datos del formulario
+    y method="POST" normalmente como POST, no get
+    POST quiere decir que los datos van en el cuerpo del mensaje htrp
+    -->
+    <form action="https://enafou04r5v49.x.pipedream.net" method="GET">
+
+    
+    <div id="contenedora-formulario" style="width: 700px;height: 600px;background: #bebebe;">
+        <!-- Fila 1 -->
+        <div class="clearfix" style="float: none;margin: 0 auto; width: 700px;text-align: center; background: white;">
+            -formulario en capas-
+        </div>
+        <!--celda 2-->
+        <div class="clearfix">
+            <!--celda 1 de la fila 2-->
+            <div style="float:left;width: 80px;">
+                Nombre
+            </div>
+            <!--celda 2 de la fila 2-->
+            <div style="float: left;">
+                    <input type="text" name="nombre" size="20"/>
+            </div>
+            <div style="float: left">
+                F.nac
+            </div>
+            <div style="float: left;">
+                <input type="date" name="fecha" title="Pon fecha de nacimineto">
+            </div>
+            <div style="float: left;">
+                    <input type="text" placeholder="DNI" size="10"  
+                    maxlength="9" name="nif" 
+                    pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" 
+                    title="Introduzca el dni" required/>
+            </div>
+        </div>
+        <!--celda 3-->
+        <div class="clearfix">
+                <!--celda 1 de la fila 3-->
+                <div style="float:left;width: 80px;">
+                    Apellidos
+                </div>
+                <!--celda 2 de la fila 3-->
+                <div style="float: left;">
+                        <input type="text" name="Apellidos" size="64"/>
+                </div>
+        </div>   
+        <div class="clearfix">
+                <!--celda 1 de la fila 3-->
+                <div style="float:left;width: 80px;">
+                    Dirección
+                </div>
+                <!--celda 2 de la fila 3-->
+                <div style="float: left;">
+                        <input type="text" name="Dirección" size="64"/>
+                </div>
+        </div>
+        <div class="clearfix">
+                <div style="float:left;width: 80px;">
+                    Código postal
+                </div>
+                <div style="float: left;">
+                        <input type="text" name="Código postal" size="2" maxlength="5"/>
+                </div>
+                <div style="float:left;width: 80px;">
+                        Ciudad
+                    </div>
+                    <div style="float: left;">
+                            <input type="text" name="Código postal" size="44"/>
+                </div>
+        </div>
+        <div class="clearfix"></div>
+            <div style="vertical-align: inherit¡;">
+            Comentarios: 
+            <textarea name="comentario" rows="40" cols="10" style="margin: 0px; width: 311px; height: 152px;"> </textarea>
+        </div>    
+        <!--celda 4-->
+        <div class="clearfix">
+                <!--celda 1 de la fila 4-->
+                <div style="float:left;width: 80px;">
+                    <!--este input es un boton para limpiar los campos del formulario-->
+                    <input type="reset" value="limpiar"/>
+                </div>
+                <!--celda 2 de la fila 4-->
+                <div style="float: right;">
+                    <!-- este es un input para enviar el formularo al action (url) establecido -->
+                        <input type="submit" value="enviar"/>
+                </div>
+              
+                
+    </div>
+    </form>
+</body>
+</html>
